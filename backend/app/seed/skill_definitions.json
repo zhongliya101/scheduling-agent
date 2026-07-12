@@ -1,0 +1,30 @@
+[
+  {
+    "level": "S",
+    "name": "专业师傅",
+    "description": "可处理高难度专业任务",
+    "can_independent": 1,
+    "score": 1.0
+  },
+  {
+    "level": "A",
+    "name": "熟练员工",
+    "description": "可独立完成区域常规任务",
+    "can_independent": 1,
+    "score": 0.9
+  },
+  {
+    "level": "B",
+    "name": "可支援员工",
+    "description": "可在监督下承担基础任务",
+    "can_independent": 0,
+    "score": 0.7
+  },
+  {
+    "level": "C",
+    "name": "新手/临时",
+    "description": "只能做辅助性工作",
+    "can_independent": 0,
+    "score": 0.0
+  }
+]

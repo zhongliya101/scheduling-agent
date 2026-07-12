@@ -1,0 +1,155 @@
+[
+  {
+    "id": "task_aquatic_01",
+    "area_code": "aquatic",
+    "task_code": "fish_butcher",
+    "task_name": "杀鱼",
+    "is_professional": 1,
+    "min_skill_level": "S",
+    "priority": 100
+  },
+  {
+    "id": "task_aquatic_02",
+    "area_code": "aquatic",
+    "task_code": "aquatic_process",
+    "task_name": "水产处理",
+    "is_professional": 1,
+    "min_skill_level": "A",
+    "priority": 90
+  },
+  {
+    "id": "task_aquatic_03",
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "task_name": "称重",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 50
+  },
+  {
+    "id": "task_aquatic_04",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
+    "task_name": "清洁",
+    "is_professional": 0,
+    "min_skill_level": "C",
+    "priority": 20
+  },
+  {
+    "id": "task_meat_01",
+    "area_code": "meat",
+    "task_code": "meat_cut",
+    "task_name": "切肉",
+    "is_professional": 1,
+    "min_skill_level": "S",
+    "priority": 100
+  },
+  {
+    "id": "task_meat_02",
+    "area_code": "meat",
+    "task_code": "meat_divide",
+    "task_name": "分割",
+    "is_professional": 1,
+    "min_skill_level": "A",
+    "priority": 90
+  },
+  {
+    "id": "task_meat_03",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "task_name": "称重",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 50
+  },
+  {
+    "id": "task_meat_04",
+    "area_code": "meat",
+    "task_code": "display",
+    "task_name": "陈列",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 40
+  },
+  {
+    "id": "task_produce_01",
+    "area_code": "produce",
+    "task_code": "restock",
+    "task_name": "补货",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 70
+  },
+  {
+    "id": "task_produce_02",
+    "area_code": "produce",
+    "task_code": "display",
+    "task_name": "陈列",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 50
+  },
+  {
+    "id": "task_produce_03",
+    "area_code": "produce",
+    "task_code": "packing",
+    "task_name": "打包",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 40
+  },
+  {
+    "id": "task_produce_04",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "task_name": "称重",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 50
+  },
+  {
+    "id": "task_cashier_01",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "task_name": "收银",
+    "is_professional": 0,
+    "min_skill_level": "A",
+    "priority": 80
+  },
+  {
+    "id": "task_cashier_02",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "task_name": "顾客服务",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 40
+  },
+  {
+    "id": "task_repl_01",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "task_name": "到货卸货",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 70
+  },
+  {
+    "id": "task_repl_02",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "task_name": "上架补货",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 70
+  },
+  {
+    "id": "task_repl_03",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "task_name": "库存整理",
+    "is_professional": 0,
+    "min_skill_level": "B",
+    "priority": 40
+  }
+]

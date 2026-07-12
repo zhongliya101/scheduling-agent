@@ -1,0 +1,32 @@
+[
+  {
+    "code": "employee_unavailable",
+    "label": "员工实际不可用",
+    "sort_order": 1
+  },
+  {
+    "code": "employee_not_fit",
+    "label": "员工不适合该区域",
+    "sort_order": 2
+  },
+  {
+    "code": "manager_experience",
+    "label": "店长经验调整",
+    "sort_order": 3
+  },
+  {
+    "code": "area_leader_request",
+    "label": "区域负责人要求",
+    "sort_order": 4
+  },
+  {
+    "code": "operation_change",
+    "label": "临时经营变化",
+    "sort_order": 5
+  },
+  {
+    "code": "other",
+    "label": "其他",
+    "sort_order": 6
+  }
+]
