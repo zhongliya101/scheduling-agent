@@ -1,0 +1,552 @@
+from __future__ import annotations
+
+from collections import Counter, defaultdict
+from datetime import datetime, timedelta, timezone
+from typing import Any
+from uuid import uuid4
+
+from app.core.config import get_settings
+from app.data.seed_loader import SeedLoader
+from app.models.schemas import KpiResult
+
+
+WEEKDAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+SHIFT_SLOTS = {
+    "morning": "08:00-16:00",
+    "evening": "14:00-22:00",
+    "split": "08:00-12:00,17:00-21:00",
+}
+SLOT_RANGES = {
+    "08:00-16:00": [(8, 16)],
+    "14:00-22:00": [(14, 22)],
+    "08:00-12:00,17:00-21:00": [(8, 12), (17, 21)],
+    "18:00-21:00": [(18, 21)],
+    "10:00-14:00": [(10, 14)],
+    "16:00-21:00": [(16, 21)],
+}
+SKILL_RANK = {"S": 4, "A": 3, "B": 2, "C": 1}
+
+
+class SchedulingGenerator:
+    def __init__(self, seed_loader: SeedLoader | None = None) -> None:
+        self.settings = get_settings()
+        self.seed_loader = seed_loader or SeedLoader()
+        self.seed = self.seed_loader.all()
+        self.areas = {row["code"]: row for row in self.seed["areas"]}
+        self.tasks = {(row["area_code"], row["task_code"]): row for row in self.seed["area_tasks"]}
+        self.tasks_by_area = self._tasks_by_area()
+        self.employees = {row["id"]: row for row in self.seed["employees"]}
+        self.skills = self._skills()
+
+    def generate(self, week_start: str, demand_results: list[dict[str, Any]]) -> dict[str, Any]:
+        version_id = f"sch_{uuid4().hex[:8]}"
+        generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+        leave_resolution = self.resolve_leave(week_start)
+        preferences = self._preferences(week_start)
+        schedule_items: list[dict[str, Any]] = []
+        employee_hours: Counter[str] = Counter()
+
+        start = datetime.strptime(week_start, "%Y-%m-%d").date()
+        for offset in range(7):
+            current = start + timedelta(days=offset)
+            weekday = WEEKDAY_NAMES[current.weekday()]
+            for area_code, area in self.areas.items():
+                approved_leave = leave_resolution.get((current.isoformat(), area_code), set())
+                regulars = [
+                    emp
+                    for emp in self.employees.values()
+                    if emp["employee_type"] == "regular"
+                    and emp["main_area"] == area_code
+                    and emp["id"] not in approved_leave
+                    and emp["is_active"]
+                ]
+                regulars.sort(key=lambda emp: (not emp.get("is_protected"), employee_hours[emp["id"]], emp["id"]))
+                baseline_min = int(area["baseline_min"])
+                professional_total = [emp for emp in regulars if self._has_professional_skill(emp["id"], area_code)]
+                needed_professionals = min(4, len(professional_total)) if self._has_professional_tasks(area_code) else 0
+                area_target = baseline_min * 3 if self._has_professional_tasks(area_code) else baseline_min * 2
+                target = min(len(regulars), max(area_target, int(area["baseline_max"]), needed_professionals))
+                scheduled_regulars = professional_total[:needed_professionals]
+                for emp in regulars:
+                    if len(scheduled_regulars) >= target:
+                        break
+                    if emp["id"] not in {scheduled["id"] for scheduled in scheduled_regulars}:
+                        scheduled_regulars.append(emp)
+                professional_capable = [
+                    emp
+                    for emp in scheduled_regulars
+                    if self._has_professional_skill(emp["id"], area_code)
+                ]
+                professional_shift_plan = self._professional_shift_plan(len(professional_capable))
+                professional_shift_index = 0
+                non_sole_position = 0
+                for position, emp in enumerate(scheduled_regulars):
+                    shift_type = preferences.get(emp["id"], emp.get("regular_shift_type") or "morning")
+                    if self._has_professional_skill(emp["id"], area_code) and len(professional_capable) >= 2:
+                        shift_type = professional_shift_plan[professional_shift_index]
+                        professional_shift_index += 1
+                    elif self._has_professional_skill(emp["id"], area_code):
+                        shift_type = "split"
+                    elif non_sole_position < baseline_min * 2:
+                        shift_type = "morning" if non_sole_position % 2 == 0 else "evening"
+                        non_sole_position += 1
+                    elif non_sole_position == baseline_min * 2:
+                        shift_type = "split"
+                        non_sole_position += 1
+                    if shift_type == "rotating":
+                        shift_type = "morning" if (offset + int(emp["id"].split("_")[1])) % 2 == 0 else "evening"
+                    task = self._best_regular_task(emp["id"], area_code)
+                    slot = SHIFT_SLOTS.get(shift_type, SHIFT_SLOTS["morning"])
+                    hours = self._slot_hours(slot)
+                    employee_hours[emp["id"]] += hours
+                    schedule_items.append(
+                        self._item(
+                            version_id,
+                            len(schedule_items) + 1,
+                            current.isoformat(),
+                            weekday,
+                            slot,
+                            area_code,
+                            task["task_code"],
+                            emp,
+                            "regular",
+                            shift_type,
+                            hours,
+                            int(task["is_professional"]),
+                            f"{emp['name']}为{area['name']}正式工，按{self._shift_label(shift_type)}覆盖{task['task_name']}；正式工不跨区排班。",
+                        )
+                    )
+
+        self._assign_temporary_support(version_id, demand_results, schedule_items, employee_hours)
+        risks = self.detect_risks(version_id, demand_results, schedule_items)
+        kpis = self.calculate_kpis(demand_results, schedule_items, risks, 0).model_dump()
+        summary = self._summary(kpis, risks)
+        return {
+            "version_id": version_id,
+            "store_id": self.settings.store_id,
+            "store_name": self.settings.store_name,
+            "week_start": week_start,
+            "generated_at": generated_at,
+            "agent_summary": summary,
+            "agent_fallback": True,
+            "demand_results": demand_results,
+            "schedule_items": schedule_items,
+            "risks": risks,
+            "kpis": kpis,
+            "leave_resolution": self._leave_payload(week_start, leave_resolution),
+        }
+
+    def resolve_leave(self, week_start: str) -> dict[tuple[str, str], set[str]]:
+        start = datetime.strptime(week_start, "%Y-%m-%d").date()
+        leave_by_day_area: dict[tuple[str, str], list[str]] = defaultdict(list)
+        regular_ids_by_area: dict[str, list[str]] = defaultdict(list)
+        professional_ids_by_area: dict[str, set[str]] = defaultdict(set)
+        for emp in self.employees.values():
+            if emp["employee_type"] == "regular" and emp["is_active"]:
+                regular_ids_by_area[emp["main_area"]].append(emp["id"])
+                if self._has_professional_skill(emp["id"], emp["main_area"]):
+                    professional_ids_by_area[emp["main_area"]].add(emp["id"])
+        for row in self.seed["employee_weekly_leave"]:
+            if row["week_start"] != week_start:
+                continue
+            emp = self.employees.get(row["employee_id"])
+            if not emp or emp["employee_type"] != "regular":
+                continue
+            day_offset = WEEKDAY_NAMES.index(row["preferred_day_off"])
+            day = (start + timedelta(days=day_offset)).isoformat()
+            leave_by_day_area[(day, emp["main_area"])].append(emp["id"])
+
+        approved: dict[tuple[str, str], set[str]] = defaultdict(set)
+        for key, emp_ids in leave_by_day_area.items():
+            _, area_code = key
+            baseline_min = int(self.areas[area_code]["baseline_min"])
+            capacity = self._daily_leave_capacity(area_code)
+            ordered = sorted(emp_ids, key=lambda eid: (self.employees[eid].get("is_protected"), eid))
+            for eid in ordered:
+                if len(approved[key]) >= capacity:
+                    continue
+                if self._would_break_professional_leave(area_code, key[0], eid, approved, professional_ids_by_area):
+                    continue
+                approved[key].add(eid)
+
+        approved_by_employee = {eid for ids in approved.values() for eid in ids}
+        for area_code, emp_ids in regular_ids_by_area.items():
+            for eid in sorted(emp_ids):
+                if eid in approved_by_employee:
+                    continue
+                candidate_days = [
+                    ((start + timedelta(days=offset)).isoformat(), area_code)
+                    for offset in range(7)
+                ]
+                candidate_days.sort(key=lambda key: (len(approved[key]), key[0]))
+                for key in candidate_days:
+                    if len(approved[key]) >= self._daily_leave_capacity(area_code):
+                        continue
+                    if self._would_break_professional_leave(area_code, key[0], eid, approved, professional_ids_by_area):
+                        continue
+                    approved[key].add(eid)
+                    approved_by_employee.add(eid)
+                    break
+        return approved
+
+    def recommend_support(
+        self,
+        version: dict[str, Any],
+        date: str,
+        slot: str,
+        area_code: str,
+        task_code: str | None = None,
+        limit: int = 5,
+    ) -> list[dict[str, Any]]:
+        task_code = task_code or self._non_professional_task(area_code)["task_code"]
+        candidates = []
+        for emp in self.employees.values():
+            if emp["employee_type"] != "temporary":
+                continue
+            skill = self.skills.get((emp["id"], area_code, task_code))
+            if not skill:
+                continue
+            used_hours = sum(item["hours"] for item in version["schedule_items"] if item["employee_id"] == emp["id"])
+            if used_hours >= emp["weekly_hours_limit"]:
+                continue
+            score = self._candidate_score(emp["id"], area_code, task_code, used_hours)
+            candidates.append(
+                {
+                    "employee_id": emp["id"],
+                    "employee_name": emp["name"],
+                    "skill_level": skill["skill_level"],
+                    "weekly_hours": used_hours,
+                    "weekly_hours_limit": emp["weekly_hours_limit"],
+                    "score": score,
+                    "reason": f"{emp['name']}可跨区支援{self.areas[area_code]['name']}，{task_code}技能{skill['skill_level']}，本周已排{used_hours:g}小时。",
+                }
+            )
+        return sorted(candidates, key=lambda row: row["score"], reverse=True)[:limit]
+
+    def detect_risks(
+        self,
+        version_id: str,
+        demand_results: list[dict[str, Any]],
+        schedule_items: list[dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        risks: list[dict[str, Any]] = []
+        for row in demand_results:
+            assigned = [
+                item
+                for item in schedule_items
+                if item["date"] == row["date"]
+                and item["area_code"] == row["area_code"]
+                and self._covers(item["slot"], row["slot"])
+            ]
+            if row["is_protected"] and self.tasks[(row["area_code"], row["task_code"])]["is_professional"]:
+                qualified_count = self._qualified_professional_count(row, schedule_items)
+                if qualified_count < row["required_count"]:
+                    risks.append(
+                        {
+                            "id": f"risk_{len(risks)+1:04d}",
+                            "type": "professional_gap",
+                            "level": "critical",
+                            "description": f"{row['date']} {row['slot']} {row['area_name']}{row['task_name']}需要{row['required_count']}名合格师傅，当前{qualified_count}名。",
+                            "affected_item_ids": [],
+                            "suggestion": "优先保留本区域S/A级正式工，不建议跨区抽调。",
+                        }
+                    )
+            if row["priority"] == "high" and len(assigned) < row["required_count"]:
+                gap = row["required_count"] - len(assigned)
+                risks.append(
+                    {
+                        "id": f"risk_{len(risks)+1:04d}",
+                        "type": "peak_gap",
+                        "level": "warning",
+                        "description": f"{row['date']} {row['slot']} {row['area_name']}需求{row['required_count']}人，当前覆盖{len(assigned)}人，缺口{gap}人。",
+                        "affected_item_ids": [item["id"] for item in assigned],
+                        "suggestion": "从临时工混排池推荐候选人补位。",
+                    }
+                )
+        return risks
+
+    def calculate_kpis(
+        self,
+        demand_results: list[dict[str, Any]],
+        schedule_items: list[dict[str, Any]],
+        risks: list[dict[str, Any]],
+        intervention_count: int,
+    ) -> KpiResult:
+        professional_demand = [
+            row
+            for row in demand_results
+            if self.tasks[(row["area_code"], row["task_code"])]["is_professional"]
+        ]
+        professional_covered = 0
+        for row in professional_demand:
+            if self._qualified_professional_count(row, schedule_items) >= row["required_count"]:
+                professional_covered += 1
+        baseline_checks = 0
+        baseline_hits = 0
+        checked = {(row["date"], row["slot"], row["area_code"]) for row in demand_results}
+        for day, slot, area_code in checked:
+            baseline_checks += 1
+            regular_count = sum(
+                1
+                for item in schedule_items
+                if item["date"] == day
+                and item["area_code"] == area_code
+                and item["employee_type"] == "regular"
+                and self._covers(item["slot"], slot)
+            )
+            if regular_count >= int(self.areas[area_code]["baseline_min"]):
+                baseline_hits += 1
+        mixed_items = [item for item in schedule_items if item["assignment_type"] == "temporary"]
+        temp_count = sum(1 for emp in self.employees.values() if emp["employee_type"] == "temporary")
+        peak_gap_count = sum(1 for risk in risks if risk["type"] == "peak_gap")
+        total_items = max(1, len(schedule_items))
+        return KpiResult(
+            professional_coverage_rate=round(professional_covered / max(1, len(professional_demand)), 4),
+            baseline_achievement_rate=round(baseline_hits / max(1, baseline_checks), 4),
+            mixed_utilization_rate=round(len({item["employee_id"] for item in mixed_items}) / max(1, temp_count), 4),
+            peak_gap_count=peak_gap_count,
+            intervention_rate=round(intervention_count / total_items, 4),
+        )
+
+    def _qualified_professional_count(self, demand: dict[str, Any], schedule_items: list[dict[str, Any]]) -> int:
+        task = self.tasks[(demand["area_code"], demand["task_code"])]
+        if not task["is_professional"]:
+            return 0
+        count = 0
+        for item in schedule_items:
+            if (
+                item["date"] == demand["date"]
+                and item["area_code"] == demand["area_code"]
+                and item["employee_type"] == "regular"
+                and self._covers(item["slot"], demand["slot"])
+            ):
+                skill = self.skills.get((item["employee_id"], demand["area_code"], demand["task_code"]))
+                if skill and SKILL_RANK[skill["skill_level"]] >= SKILL_RANK[task["min_skill_level"]]:
+                    count += 1
+        return count
+
+    def _assign_temporary_support(
+        self,
+        version_id: str,
+        demand_results: list[dict[str, Any]],
+        schedule_items: list[dict[str, Any]],
+        employee_hours: Counter[str],
+    ) -> None:
+        peak_demands = [
+            row
+            for row in sorted(demand_results, key=lambda item: item["demand_score"], reverse=True)
+            if row["priority"] == "high" and not self.tasks[(row["area_code"], row["task_code"])]["is_professional"]
+        ]
+        assigned_by_day: set[tuple[str, str]] = set()
+        for demand in peak_demands:
+            slot = "18:00-21:00"
+            day_index = WEEKDAY_NAMES.index(demand["weekday"])
+            if day_index >= 5:
+                slot = "16:00-21:00" if demand["demand_score"] >= 86 else "10:00-14:00"
+            task_code = demand["task_code"]
+            candidates = [
+                emp
+                for emp in self.employees.values()
+                if emp["employee_type"] == "temporary"
+                and (demand["date"], emp["id"]) not in assigned_by_day
+                and employee_hours[emp["id"]] + self._slot_hours(slot) <= emp["weekly_hours_limit"]
+                and (emp["id"], demand["area_code"], task_code) in self.skills
+            ]
+            if not candidates:
+                continue
+            candidates.sort(
+                key=lambda emp: self._candidate_score(emp["id"], demand["area_code"], task_code, employee_hours[emp["id"]]),
+                reverse=True,
+            )
+            emp = candidates[0]
+            task = self.tasks[(demand["area_code"], task_code)]
+            hours = self._slot_hours(slot)
+            employee_hours[emp["id"]] += hours
+            assigned_by_day.add((demand["date"], emp["id"]))
+            schedule_items.append(
+                self._item(
+                    version_id,
+                    len(schedule_items) + 1,
+                    demand["date"],
+                    demand["weekday"],
+                    slot,
+                    demand["area_code"],
+                    task_code,
+                    emp,
+                    "temporary",
+                    None,
+                    hours,
+                    0,
+                    f"{emp['name']}来自全店临时工池，支援{demand['area_name']}{task['task_name']}；依据：{', '.join(demand['demand_factors'][:3])}。",
+                )
+            )
+
+    def _item(
+        self,
+        version_id: str,
+        index: int,
+        date: str,
+        weekday: str,
+        slot: str,
+        area_code: str,
+        task_code: str,
+        employee: dict[str, Any],
+        assignment_type: str,
+        regular_shift_type: str | None,
+        hours: float,
+        is_protected: int,
+        explanation: str,
+    ) -> dict[str, Any]:
+        area = self.areas[area_code]
+        task = self.tasks[(area_code, task_code)]
+        return {
+            "id": f"si_{index:04d}",
+            "version_id": version_id,
+            "date": date,
+            "weekday": weekday,
+            "slot": slot,
+            "area_code": area_code,
+            "area_name": area["name"],
+            "task_code": task_code,
+            "task_name": task["task_name"],
+            "employee_id": employee["id"],
+            "employee_name": employee["name"],
+            "employee_type": employee["employee_type"],
+            "assignment_type": assignment_type,
+            "regular_shift_type": regular_shift_type,
+            "hours": hours,
+            "risk_level": "none",
+            "explanation": explanation,
+            "source": "system",
+            "is_protected": is_protected,
+        }
+
+    def _tasks_by_area(self) -> dict[str, list[dict[str, Any]]]:
+        rows: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        for task in self.seed["area_tasks"]:
+            rows[task["area_code"]].append(task)
+        for tasks in rows.values():
+            tasks.sort(key=lambda row: row["priority"], reverse=True)
+        return rows
+
+    def _skills(self) -> dict[tuple[str, str, str], dict[str, Any]]:
+        return {
+            (row["employee_id"], row["area_code"], row["task_code"]): row
+            for row in self.seed["employee_skills"]
+        }
+
+    def _preferences(self, week_start: str) -> dict[str, str]:
+        return {
+            row["employee_id"]: row["preferred_shift_type"]
+            for row in self.seed["employee_weekly_preferences"]
+            if row["week_start"] == week_start
+        }
+
+    def _best_regular_task(self, employee_id: str, area_code: str) -> dict[str, Any]:
+        tasks = self.tasks_by_area[area_code]
+        task_scores = []
+        for task in tasks:
+            skill = self.skills.get((employee_id, area_code, task["task_code"]))
+            if not skill:
+                continue
+            task_scores.append((task["is_professional"], SKILL_RANK[skill["skill_level"]], task["priority"], task))
+        if not task_scores:
+            return self._non_professional_task(area_code)
+        return sorted(task_scores, reverse=True, key=lambda row: row[:3])[0][3]
+
+    def _has_professional_skill(self, employee_id: str, area_code: str) -> bool:
+        for task in self.tasks_by_area[area_code]:
+            if not task["is_professional"]:
+                continue
+            skill = self.skills.get((employee_id, area_code, task["task_code"]))
+            if skill and SKILL_RANK[skill["skill_level"]] >= SKILL_RANK[task["min_skill_level"]]:
+                return True
+        return False
+
+    def _has_professional_tasks(self, area_code: str) -> bool:
+        return any(task["is_professional"] for task in self.tasks_by_area[area_code])
+
+    def _professional_shift_plan(self, count: int) -> list[str]:
+        if count <= 0:
+            return []
+        if count == 1:
+            return ["split"]
+        if count == 2:
+            return ["split", "split"]
+        if count == 3:
+            return ["morning", "evening", "split"]
+        return ["morning", "evening", "morning", "evening"] + ["split"] * max(0, count - 4)
+
+    def _daily_leave_capacity(self, area_code: str) -> int:
+        regular_count = sum(
+            1
+            for emp in self.employees.values()
+            if emp["employee_type"] == "regular" and emp["main_area"] == area_code and emp["is_active"]
+        )
+        area = self.areas[area_code]
+        area_target = int(area["baseline_min"]) * 3 if self._has_professional_tasks(area_code) else int(area["baseline_min"]) * 2
+        scheduled_target = max(area_target, int(area["baseline_max"]))
+        return max(1, regular_count - scheduled_target)
+
+    def _would_break_professional_leave(
+        self,
+        area_code: str,
+        date_text: str,
+        employee_id: str,
+        approved: dict[tuple[str, str], set[str]],
+        professional_ids_by_area: dict[str, set[str]],
+    ) -> bool:
+        professional_ids = professional_ids_by_area.get(area_code, set())
+        if employee_id not in professional_ids:
+            return False
+        off_count = sum(1 for eid in approved[(date_text, area_code)] if eid in professional_ids)
+        min_available = min(2, len(professional_ids))
+        return len(professional_ids) - off_count - 1 < min_available
+
+    def _non_professional_task(self, area_code: str) -> dict[str, Any]:
+        return next(task for task in self.tasks_by_area[area_code] if not task["is_professional"])
+
+    def _candidate_score(self, employee_id: str, area_code: str, task_code: str, used_hours: float) -> float:
+        skill = self.skills[(employee_id, area_code, task_code)]
+        return round(SKILL_RANK[skill["skill_level"]] * 20 + float(skill["area_familiarity"]) * 30 - used_hours * 0.7, 2)
+
+    def _covers(self, assignment_slot: str, demand_slot: str) -> bool:
+        start_hour = int(demand_slot[:2])
+        for start, end in SLOT_RANGES.get(assignment_slot, []):
+            if start <= start_hour < end:
+                return True
+        return False
+
+    def _slot_hours(self, slot: str) -> float:
+        return sum(end - start for start, end in SLOT_RANGES[slot])
+
+    def _shift_label(self, shift_type: str) -> str:
+        return {"morning": "早班8:00-16:00", "evening": "晚班14:00-22:00", "split": "两头班8:00-12:00/17:00-21:00"}.get(
+            shift_type, "轮班"
+        )
+
+    def _summary(self, kpis: dict[str, Any], risks: list[dict[str, Any]]) -> str:
+        return (
+            "已按半混班规则生成7天班表：正式工固定在所属部门，专业岗优先锁定S/A级师傅；"
+            f"临时工用于高峰补位。专业岗覆盖率{kpis['professional_coverage_rate']:.0%}，"
+            f"区域保底达成率{kpis['baseline_achievement_rate']:.0%}，当前高峰缺口{len([r for r in risks if r['type']=='peak_gap'])}个。"
+        )
+
+    def _leave_payload(self, week_start: str, approved: dict[tuple[str, str], set[str]]) -> list[dict[str, Any]]:
+        requested = [row for row in self.seed["employee_weekly_leave"] if row["week_start"] == week_start]
+        rows = []
+        start = datetime.strptime(week_start, "%Y-%m-%d").date()
+        for row in requested:
+            emp = self.employees[row["employee_id"]]
+            day = (start + timedelta(days=WEEKDAY_NAMES.index(row["preferred_day_off"]))).isoformat()
+            ok = row["employee_id"] in approved.get((day, emp["main_area"]), set())
+            rows.append(
+                {
+                    **row,
+                    "employee_name": emp["name"],
+                    "date": day,
+                    "status": "approved" if ok else "rejected",
+                    "reason": "同意休假" if ok else "同区域同日休假过多，保留区域保底正式工",
+                }
+            )
+        return rows

@@ -3,21 +3,21 @@
     "id": "wp_0001",
     "employee_id": "emp_001",
     "week_start": "2026-07-13",
-    "preferred_shift_type": "morning",
+    "preferred_shift_type": "split",
     "created_at": "2026-07-10T08:00:00Z"
   },
   {
     "id": "wp_0002",
     "employee_id": "emp_002",
     "week_start": "2026-07-13",
-    "preferred_shift_type": "morning",
+    "preferred_shift_type": "split",
     "created_at": "2026-07-10T08:00:00Z"
   },
   {
     "id": "wp_0003",
     "employee_id": "emp_003",
     "week_start": "2026-07-13",
-    "preferred_shift_type": "evening",
+    "preferred_shift_type": "split",
     "created_at": "2026-07-10T08:00:00Z"
   },
   {

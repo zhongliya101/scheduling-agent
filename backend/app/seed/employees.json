@@ -27,7 +27,7 @@
     "regular_shift_type": "split",
     "weekly_hours_limit": 48,
     "is_active": 1,
-    "is_protected": 0
+    "is_protected": 1
   },
   {
     "id": "emp_004",
@@ -37,7 +37,7 @@
     "regular_shift_type": "split",
     "weekly_hours_limit": 48,
     "is_active": 1,
-    "is_protected": 0
+    "is_protected": 1
   },
   {
     "id": "emp_005",
@@ -207,7 +207,7 @@
     "regular_shift_type": "split",
     "weekly_hours_limit": 48,
     "is_active": 1,
-    "is_protected": 0
+    "is_protected": 1
   },
   {
     "id": "emp_022",
@@ -217,7 +217,7 @@
     "regular_shift_type": "evening",
     "weekly_hours_limit": 48,
     "is_active": 1,
-    "is_protected": 0
+    "is_protected": 1
   },
   {
     "id": "emp_023",

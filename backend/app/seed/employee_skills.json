@@ -67,220 +67,252 @@
     "id": "esk_0009",
     "employee_id": "emp_003",
     "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.83
+    "task_code": "fish_butcher",
+    "skill_level": "S",
+    "area_familiarity": 1.0
   },
   {
     "id": "esk_0010",
     "employee_id": "emp_003",
     "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "B",
-    "area_familiarity": 0.82
+    "task_code": "aquatic_process",
+    "skill_level": "A",
+    "area_familiarity": 0.96
   },
   {
     "id": "esk_0011",
-    "employee_id": "emp_004",
+    "employee_id": "emp_003",
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.9
+  },
+  {
+    "id": "esk_0012",
+    "employee_id": "emp_003",
     "area_code": "aquatic",
     "task_code": "cleaning",
     "skill_level": "B",
     "area_familiarity": 0.62
   },
   {
-    "id": "esk_0012",
+    "id": "esk_0013",
     "employee_id": "emp_004",
     "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.83
+    "task_code": "fish_butcher",
+    "skill_level": "S",
+    "area_familiarity": 0.96
   },
   {
-    "id": "esk_0013",
-    "employee_id": "emp_005",
+    "id": "esk_0014",
+    "employee_id": "emp_004",
+    "area_code": "aquatic",
+    "task_code": "aquatic_process",
+    "skill_level": "A",
+    "area_familiarity": 0.95
+  },
+  {
+    "id": "esk_0015",
+    "employee_id": "emp_004",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.62
   },
   {
-    "id": "esk_0014",
-    "employee_id": "emp_005",
+    "id": "esk_0016",
+    "employee_id": "emp_004",
     "area_code": "aquatic",
     "task_code": "cleaning",
     "skill_level": "B",
     "area_familiarity": 0.8
   },
   {
-    "id": "esk_0015",
-    "employee_id": "emp_006",
+    "id": "esk_0017",
+    "employee_id": "emp_005",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0016",
-    "employee_id": "emp_006",
+    "id": "esk_0018",
+    "employee_id": "emp_005",
     "area_code": "aquatic",
     "task_code": "cleaning",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0017",
-    "employee_id": "emp_007",
+    "id": "esk_0019",
+    "employee_id": "emp_006",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.76
   },
   {
-    "id": "esk_0018",
-    "employee_id": "emp_007",
+    "id": "esk_0020",
+    "employee_id": "emp_006",
     "area_code": "aquatic",
     "task_code": "cleaning",
     "skill_level": "B",
     "area_familiarity": 0.98
   },
   {
-    "id": "esk_0019",
-    "employee_id": "emp_008",
+    "id": "esk_0021",
+    "employee_id": "emp_007",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.83
   },
   {
-    "id": "esk_0020",
-    "employee_id": "emp_008",
+    "id": "esk_0022",
+    "employee_id": "emp_007",
     "area_code": "aquatic",
     "task_code": "cleaning",
     "skill_level": "B",
     "area_familiarity": 0.62
   },
   {
-    "id": "esk_0021",
-    "employee_id": "emp_009",
-    "area_code": "meat",
+    "id": "esk_0023",
+    "employee_id": "emp_008",
+    "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.67
-  },
-  {
-    "id": "esk_0022",
-    "employee_id": "emp_009",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.87
-  },
-  {
-    "id": "esk_0023",
-    "employee_id": "emp_009",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "A",
     "area_familiarity": 0.77
   },
   {
     "id": "esk_0024",
-    "employee_id": "emp_009",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
+    "employee_id": "emp_008",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
     "skill_level": "B",
-    "area_familiarity": 0.6
+    "area_familiarity": 0.83
   },
   {
     "id": "esk_0025",
     "employee_id": "emp_009",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "A",
-    "area_familiarity": 0.66
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.87
   },
   {
     "id": "esk_0026",
     "employee_id": "emp_009",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.8
+    "area_code": "meat",
+    "task_code": "display",
+    "skill_level": "S",
+    "area_familiarity": 0.58
   },
   {
     "id": "esk_0027",
     "employee_id": "emp_009",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "B",
-    "area_familiarity": 0.69
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "S",
+    "area_familiarity": 0.6
   },
   {
     "id": "esk_0028",
-    "employee_id": "emp_010",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
+    "employee_id": "emp_009",
+    "area_code": "cashier",
+    "task_code": "cashier",
     "skill_level": "B",
-    "area_familiarity": 0.97
+    "area_familiarity": 0.55
   },
   {
     "id": "esk_0029",
+    "employee_id": "emp_009",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.76
+  },
+  {
+    "id": "esk_0030",
+    "employee_id": "emp_009",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "B",
+    "area_familiarity": 0.63
+  },
+  {
+    "id": "esk_0031",
+    "employee_id": "emp_009",
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.83
+  },
+  {
+    "id": "esk_0032",
+    "employee_id": "emp_009",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
+    "skill_level": "B",
+    "area_familiarity": 0.62
+  },
+  {
+    "id": "esk_0033",
+    "employee_id": "emp_010",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
+    "skill_level": "B",
+    "area_familiarity": 0.85
+  },
+  {
+    "id": "esk_0034",
     "employee_id": "emp_010",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.97
+    "area_familiarity": 0.83
   },
   {
-    "id": "esk_0030",
+    "id": "esk_0035",
     "employee_id": "emp_011",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.78
-  },
-  {
-    "id": "esk_0031",
-    "employee_id": "emp_011",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "B",
-    "area_familiarity": 1.0
-  },
-  {
-    "id": "esk_0032",
-    "employee_id": "emp_012",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0033",
+    "id": "esk_0036",
+    "employee_id": "emp_011",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
+    "skill_level": "B",
+    "area_familiarity": 0.69
+  },
+  {
+    "id": "esk_0037",
     "employee_id": "emp_012",
     "area_code": "aquatic",
     "task_code": "cleaning",
-    "skill_level": "C",
-    "area_familiarity": 0.71
+    "skill_level": "B",
+    "area_familiarity": 0.65
   },
   {
-    "id": "esk_0034",
+    "id": "esk_0038",
     "employee_id": "emp_013",
     "area_code": "aquatic",
-    "task_code": "cleaning",
+    "task_code": "weighing",
     "skill_level": "C",
     "area_familiarity": 0.95
   },
   {
-    "id": "esk_0035",
+    "id": "esk_0039",
     "employee_id": "emp_014",
     "area_code": "aquatic",
-    "task_code": "cleaning",
+    "task_code": "weighing",
     "skill_level": "C",
-    "area_familiarity": 0.71
+    "area_familiarity": 0.78
   },
   {
-    "id": "esk_0036",
+    "id": "esk_0040",
     "employee_id": "emp_015",
     "area_code": "aquatic",
     "task_code": "cleaning",
@@ -288,7 +320,7 @@
     "area_familiarity": 0.84
   },
   {
-    "id": "esk_0037",
+    "id": "esk_0041",
     "employee_id": "emp_015",
     "area_code": "aquatic",
     "task_code": "weighing",
@@ -296,7 +328,7 @@
     "area_familiarity": 0.99
   },
   {
-    "id": "esk_0038",
+    "id": "esk_0042",
     "employee_id": "emp_016",
     "area_code": "aquatic",
     "task_code": "weighing",
@@ -304,7 +336,7 @@
     "area_familiarity": 0.87
   },
   {
-    "id": "esk_0039",
+    "id": "esk_0043",
     "employee_id": "emp_016",
     "area_code": "aquatic",
     "task_code": "cleaning",
@@ -312,7 +344,7 @@
     "area_familiarity": 0.82
   },
   {
-    "id": "esk_0040",
+    "id": "esk_0044",
     "employee_id": "emp_017",
     "area_code": "aquatic",
     "task_code": "weighing",
@@ -320,7 +352,7 @@
     "area_familiarity": 0.98
   },
   {
-    "id": "esk_0041",
+    "id": "esk_0045",
     "employee_id": "emp_017",
     "area_code": "aquatic",
     "task_code": "cleaning",
@@ -328,63 +360,63 @@
     "area_familiarity": 0.65
   },
   {
-    "id": "esk_0042",
+    "id": "esk_0046",
+    "employee_id": "emp_018",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.86
+  },
+  {
+    "id": "esk_0047",
     "employee_id": "emp_018",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
-    "area_familiarity": 0.8
-  },
-  {
-    "id": "esk_0043",
-    "employee_id": "emp_018",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "B",
     "area_familiarity": 0.61
   },
   {
-    "id": "esk_0044",
+    "id": "esk_0048",
     "employee_id": "emp_018",
     "area_code": "replenishment",
     "task_code": "restock_unload",
     "skill_level": "B",
-    "area_familiarity": 0.79
+    "area_familiarity": 0.58
   },
   {
-    "id": "esk_0045",
+    "id": "esk_0049",
     "employee_id": "emp_018",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "A",
-    "area_familiarity": 0.66
+    "area_familiarity": 0.79
   },
   {
-    "id": "esk_0046",
+    "id": "esk_0050",
     "employee_id": "emp_018",
     "area_code": "aquatic",
     "task_code": "cleaning",
     "skill_level": "A",
-    "area_familiarity": 0.79
+    "area_familiarity": 0.68
   },
   {
-    "id": "esk_0047",
+    "id": "esk_0051",
     "employee_id": "emp_019",
     "area_code": "meat",
     "task_code": "meat_cut",
     "skill_level": "S",
-    "area_familiarity": 0.93
+    "area_familiarity": 0.95
   },
   {
-    "id": "esk_0048",
+    "id": "esk_0052",
     "employee_id": "emp_019",
     "area_code": "meat",
     "task_code": "meat_divide",
     "skill_level": "A",
-    "area_familiarity": 0.95
+    "area_familiarity": 0.99
   },
   {
-    "id": "esk_0049",
+    "id": "esk_0053",
     "employee_id": "emp_019",
     "area_code": "meat",
     "task_code": "weighing",
@@ -392,7 +424,7 @@
     "area_familiarity": 0.64
   },
   {
-    "id": "esk_0050",
+    "id": "esk_0054",
     "employee_id": "emp_019",
     "area_code": "meat",
     "task_code": "display",
@@ -400,7 +432,7 @@
     "area_familiarity": 0.77
   },
   {
-    "id": "esk_0051",
+    "id": "esk_0055",
     "employee_id": "emp_020",
     "area_code": "meat",
     "task_code": "meat_cut",
@@ -408,7 +440,7 @@
     "area_familiarity": 0.93
   },
   {
-    "id": "esk_0052",
+    "id": "esk_0056",
     "employee_id": "emp_020",
     "area_code": "meat",
     "task_code": "meat_divide",
@@ -416,7 +448,7 @@
     "area_familiarity": 0.9
   },
   {
-    "id": "esk_0053",
+    "id": "esk_0057",
     "employee_id": "emp_020",
     "area_code": "meat",
     "task_code": "weighing",
@@ -424,7 +456,7 @@
     "area_familiarity": 0.85
   },
   {
-    "id": "esk_0054",
+    "id": "esk_0058",
     "employee_id": "emp_020",
     "area_code": "meat",
     "task_code": "display",
@@ -432,7 +464,23 @@
     "area_familiarity": 0.7
   },
   {
-    "id": "esk_0055",
+    "id": "esk_0059",
+    "employee_id": "emp_021",
+    "area_code": "meat",
+    "task_code": "meat_cut",
+    "skill_level": "S",
+    "area_familiarity": 0.97
+  },
+  {
+    "id": "esk_0060",
+    "employee_id": "emp_021",
+    "area_code": "meat",
+    "task_code": "meat_divide",
+    "skill_level": "A",
+    "area_familiarity": 0.96
+  },
+  {
+    "id": "esk_0061",
     "employee_id": "emp_021",
     "area_code": "meat",
     "task_code": "display",
@@ -440,1056 +488,1008 @@
     "area_familiarity": 0.82
   },
   {
-    "id": "esk_0056",
+    "id": "esk_0062",
     "employee_id": "emp_021",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.64
+  },
+  {
+    "id": "esk_0063",
+    "employee_id": "emp_022",
+    "area_code": "meat",
+    "task_code": "meat_cut",
+    "skill_level": "S",
+    "area_familiarity": 0.99
+  },
+  {
+    "id": "esk_0064",
+    "employee_id": "emp_022",
+    "area_code": "meat",
+    "task_code": "meat_divide",
+    "skill_level": "A",
+    "area_familiarity": 0.97
+  },
+  {
+    "id": "esk_0065",
+    "employee_id": "emp_022",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.82
+  },
+  {
+    "id": "esk_0066",
+    "employee_id": "emp_022",
+    "area_code": "meat",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.93
+  },
+  {
+    "id": "esk_0067",
+    "employee_id": "emp_023",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.77
   },
   {
-    "id": "esk_0057",
-    "employee_id": "emp_022",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.64
-  },
-  {
-    "id": "esk_0058",
-    "employee_id": "emp_022",
-    "area_code": "meat",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.98
-  },
-  {
-    "id": "esk_0059",
-    "employee_id": "emp_023",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.82
-  },
-  {
-    "id": "esk_0060",
+    "id": "esk_0068",
     "employee_id": "emp_023",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "B",
-    "area_familiarity": 0.93
+    "area_familiarity": 0.62
   },
   {
-    "id": "esk_0061",
+    "id": "esk_0069",
     "employee_id": "emp_024",
     "area_code": "aquatic",
     "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.67
-  },
-  {
-    "id": "esk_0062",
-    "employee_id": "emp_024",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "A",
-    "area_familiarity": 0.65
-  },
-  {
-    "id": "esk_0063",
-    "employee_id": "emp_024",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
     "skill_level": "B",
     "area_familiarity": 0.86
   },
   {
-    "id": "esk_0064",
+    "id": "esk_0070",
+    "employee_id": "emp_024",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "A",
+    "area_familiarity": 0.58
+  },
+  {
+    "id": "esk_0071",
+    "employee_id": "emp_024",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.6
+  },
+  {
+    "id": "esk_0072",
     "employee_id": "emp_024",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.66
+    "area_familiarity": 0.71
   },
   {
-    "id": "esk_0065",
+    "id": "esk_0073",
     "employee_id": "emp_024",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "B",
-    "area_familiarity": 0.67
+    "area_familiarity": 0.77
   },
   {
-    "id": "esk_0066",
+    "id": "esk_0074",
     "employee_id": "emp_025",
     "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.64
-  },
-  {
-    "id": "esk_0067",
-    "employee_id": "emp_025",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
     "area_familiarity": 0.89
   },
   {
-    "id": "esk_0068",
+    "id": "esk_0075",
     "employee_id": "emp_025",
     "area_code": "cashier",
     "task_code": "cashier",
-    "skill_level": "A",
-    "area_familiarity": 0.87
-  },
-  {
-    "id": "esk_0069",
-    "employee_id": "emp_025",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
     "skill_level": "B",
     "area_familiarity": 0.85
   },
   {
-    "id": "esk_0070",
+    "id": "esk_0076",
     "employee_id": "emp_025",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.89
+    "area_familiarity": 0.86
   },
   {
-    "id": "esk_0071",
+    "id": "esk_0077",
     "employee_id": "emp_025",
-    "area_code": "meat",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.84
-  },
-  {
-    "id": "esk_0072",
-    "employee_id": "emp_026",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.61
   },
   {
-    "id": "esk_0073",
+    "id": "esk_0078",
     "employee_id": "emp_026",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.89
-  },
-  {
-    "id": "esk_0074",
-    "employee_id": "emp_027",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.91
   },
   {
-    "id": "esk_0075",
-    "employee_id": "emp_027",
+    "id": "esk_0079",
+    "employee_id": "emp_026",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.76
   },
   {
-    "id": "esk_0076",
-    "employee_id": "emp_028",
+    "id": "esk_0080",
+    "employee_id": "emp_027",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.71
   },
   {
-    "id": "esk_0077",
-    "employee_id": "emp_028",
+    "id": "esk_0081",
+    "employee_id": "emp_027",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.91
   },
   {
-    "id": "esk_0078",
-    "employee_id": "emp_029",
+    "id": "esk_0082",
+    "employee_id": "emp_028",
     "area_code": "meat",
     "task_code": "weighing",
-    "skill_level": "C",
+    "skill_level": "B",
     "area_familiarity": 0.75
   },
   {
-    "id": "esk_0079",
+    "id": "esk_0083",
+    "employee_id": "emp_028",
+    "area_code": "meat",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.62
+  },
+  {
+    "id": "esk_0084",
     "employee_id": "emp_029",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "C",
-    "area_familiarity": 0.79
-  },
-  {
-    "id": "esk_0080",
-    "employee_id": "emp_030",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "C",
-    "area_familiarity": 0.93
-  },
-  {
-    "id": "esk_0081",
-    "employee_id": "emp_031",
-    "area_code": "meat",
-    "task_code": "display",
-    "skill_level": "C",
-    "area_familiarity": 0.93
-  },
-  {
-    "id": "esk_0082",
-    "employee_id": "emp_032",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "C",
-    "area_familiarity": 0.61
-  },
-  {
-    "id": "esk_0083",
-    "employee_id": "emp_032",
-    "area_code": "meat",
-    "task_code": "display",
-    "skill_level": "S",
-    "area_familiarity": 0.68
-  },
-  {
-    "id": "esk_0084",
-    "employee_id": "emp_033",
-    "area_code": "meat",
-    "task_code": "display",
-    "skill_level": "A",
-    "area_familiarity": 0.71
+    "area_familiarity": 0.69
   },
   {
     "id": "esk_0085",
-    "employee_id": "emp_033",
+    "employee_id": "emp_030",
     "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "A",
-    "area_familiarity": 0.63
+    "task_code": "display",
+    "skill_level": "C",
+    "area_familiarity": 0.74
   },
   {
     "id": "esk_0086",
-    "employee_id": "emp_034",
+    "employee_id": "emp_031",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "C",
+    "area_familiarity": 0.69
+  },
+  {
+    "id": "esk_0087",
+    "employee_id": "emp_032",
+    "area_code": "meat",
+    "task_code": "display",
+    "skill_level": "C",
+    "area_familiarity": 0.73
+  },
+  {
+    "id": "esk_0088",
+    "employee_id": "emp_032",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "S",
+    "area_familiarity": 0.95
+  },
+  {
+    "id": "esk_0089",
+    "employee_id": "emp_033",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "A",
     "area_familiarity": 0.74
   },
   {
-    "id": "esk_0087",
-    "employee_id": "emp_034",
+    "id": "esk_0090",
+    "employee_id": "emp_033",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "A",
     "area_familiarity": 0.8
   },
   {
-    "id": "esk_0088",
-    "employee_id": "emp_035",
+    "id": "esk_0091",
+    "employee_id": "emp_034",
     "area_code": "meat",
     "task_code": "display",
     "skill_level": "A",
     "area_familiarity": 0.98
   },
   {
-    "id": "esk_0089",
-    "employee_id": "emp_035",
+    "id": "esk_0092",
+    "employee_id": "emp_034",
     "area_code": "meat",
     "task_code": "weighing",
-    "skill_level": "B",
+    "skill_level": "A",
     "area_familiarity": 0.65
   },
   {
-    "id": "esk_0090",
-    "employee_id": "emp_036",
+    "id": "esk_0093",
+    "employee_id": "emp_035",
     "area_code": "meat",
     "task_code": "display",
-    "skill_level": "B",
+    "skill_level": "A",
     "area_familiarity": 0.67
   },
   {
-    "id": "esk_0091",
-    "employee_id": "emp_036",
+    "id": "esk_0094",
+    "employee_id": "emp_035",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.99
   },
   {
-    "id": "esk_0092",
-    "employee_id": "emp_037",
-    "area_code": "produce",
-    "task_code": "packing",
+    "id": "esk_0095",
+    "employee_id": "emp_036",
+    "area_code": "meat",
+    "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.62
   },
   {
-    "id": "esk_0093",
-    "employee_id": "emp_037",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "B",
-    "area_familiarity": 0.84
-  },
-  {
-    "id": "esk_0094",
-    "employee_id": "emp_037",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.74
-  },
-  {
-    "id": "esk_0095",
-    "employee_id": "emp_037",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.91
-  },
-  {
     "id": "esk_0096",
-    "employee_id": "emp_038",
-    "area_code": "produce",
+    "employee_id": "emp_036",
+    "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.84
   },
   {
     "id": "esk_0097",
-    "employee_id": "emp_038",
+    "employee_id": "emp_037",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "B",
+    "area_familiarity": 0.89
+  },
+  {
+    "id": "esk_0098",
+    "employee_id": "emp_037",
     "area_code": "produce",
     "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.73
+  },
+  {
+    "id": "esk_0099",
+    "employee_id": "emp_037",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.84
+  },
+  {
+    "id": "esk_0100",
+    "employee_id": "emp_037",
+    "area_code": "produce",
+    "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.8
   },
   {
-    "id": "esk_0098",
+    "id": "esk_0101",
+    "employee_id": "emp_038",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.96
+  },
+  {
+    "id": "esk_0102",
+    "employee_id": "emp_038",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.68
+  },
+  {
+    "id": "esk_0103",
     "employee_id": "emp_038",
     "area_code": "produce",
     "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.75
-  },
-  {
-    "id": "esk_0099",
-    "employee_id": "emp_038",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "B",
-    "area_familiarity": 0.83
-  },
-  {
-    "id": "esk_0100",
-    "employee_id": "emp_039",
-    "area_code": "produce",
-    "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.62
   },
   {
-    "id": "esk_0101",
-    "employee_id": "emp_039",
+    "id": "esk_0104",
+    "employee_id": "emp_038",
     "area_code": "produce",
-    "task_code": "restock",
+    "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.77
   },
   {
-    "id": "esk_0102",
+    "id": "esk_0105",
     "employee_id": "emp_039",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.81
-  },
-  {
-    "id": "esk_0103",
-    "employee_id": "emp_039",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.92
-  },
-  {
-    "id": "esk_0104",
-    "employee_id": "emp_040",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.75
   },
   {
-    "id": "esk_0105",
-    "employee_id": "emp_040",
+    "id": "esk_0106",
+    "employee_id": "emp_039",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0106",
-    "employee_id": "emp_040",
+    "id": "esk_0107",
+    "employee_id": "emp_039",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.87
   },
   {
-    "id": "esk_0107",
-    "employee_id": "emp_040",
+    "id": "esk_0108",
+    "employee_id": "emp_039",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.73
   },
   {
-    "id": "esk_0108",
-    "employee_id": "emp_041",
+    "id": "esk_0109",
+    "employee_id": "emp_040",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.87
   },
   {
-    "id": "esk_0109",
-    "employee_id": "emp_041",
+    "id": "esk_0110",
+    "employee_id": "emp_040",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.65
   },
   {
-    "id": "esk_0110",
-    "employee_id": "emp_041",
+    "id": "esk_0111",
+    "employee_id": "emp_040",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.96
   },
   {
-    "id": "esk_0111",
-    "employee_id": "emp_041",
+    "id": "esk_0112",
+    "employee_id": "emp_040",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.8
   },
   {
-    "id": "esk_0112",
-    "employee_id": "emp_042",
+    "id": "esk_0113",
+    "employee_id": "emp_041",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.73
   },
   {
-    "id": "esk_0113",
-    "employee_id": "emp_042",
+    "id": "esk_0114",
+    "employee_id": "emp_041",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.88
   },
   {
-    "id": "esk_0114",
-    "employee_id": "emp_042",
+    "id": "esk_0115",
+    "employee_id": "emp_041",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.82
   },
   {
-    "id": "esk_0115",
-    "employee_id": "emp_042",
+    "id": "esk_0116",
+    "employee_id": "emp_041",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.68
   },
   {
-    "id": "esk_0116",
-    "employee_id": "emp_043",
+    "id": "esk_0117",
+    "employee_id": "emp_042",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.87
   },
   {
-    "id": "esk_0117",
-    "employee_id": "emp_043",
+    "id": "esk_0118",
+    "employee_id": "emp_042",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.96
   },
   {
-    "id": "esk_0118",
-    "employee_id": "emp_043",
+    "id": "esk_0119",
+    "employee_id": "emp_042",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.85
   },
   {
-    "id": "esk_0119",
-    "employee_id": "emp_043",
+    "id": "esk_0120",
+    "employee_id": "emp_042",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.72
   },
   {
-    "id": "esk_0120",
-    "employee_id": "emp_044",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.62
-  },
-  {
     "id": "esk_0121",
-    "employee_id": "emp_044",
-    "area_code": "meat",
-    "task_code": "weighing",
+    "employee_id": "emp_043",
+    "area_code": "produce",
+    "task_code": "restock",
     "skill_level": "B",
-    "area_familiarity": 0.67
+    "area_familiarity": 0.72
   },
   {
     "id": "esk_0122",
-    "employee_id": "emp_044",
-    "area_code": "cashier",
-    "task_code": "cashier",
+    "employee_id": "emp_043",
+    "area_code": "produce",
+    "task_code": "display",
     "skill_level": "B",
-    "area_familiarity": 0.69
+    "area_familiarity": 0.68
   },
   {
     "id": "esk_0123",
-    "employee_id": "emp_044",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "A",
-    "area_familiarity": 0.68
-  },
-  {
-    "id": "esk_0124",
-    "employee_id": "emp_044",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "B",
-    "area_familiarity": 0.75
-  },
-  {
-    "id": "esk_0125",
-    "employee_id": "emp_044",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.84
-  },
-  {
-    "id": "esk_0126",
-    "employee_id": "emp_045",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.86
-  },
-  {
-    "id": "esk_0127",
-    "employee_id": "emp_045",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "C",
-    "area_familiarity": 0.87
-  },
-  {
-    "id": "esk_0128",
-    "employee_id": "emp_045",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "C",
-    "area_familiarity": 0.98
-  },
-  {
-    "id": "esk_0129",
-    "employee_id": "emp_046",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "C",
-    "area_familiarity": 0.87
-  },
-  {
-    "id": "esk_0130",
-    "employee_id": "emp_046",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "C",
-    "area_familiarity": 0.68
-  },
-  {
-    "id": "esk_0131",
-    "employee_id": "emp_046",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "C",
-    "area_familiarity": 0.7
-  },
-  {
-    "id": "esk_0132",
-    "employee_id": "emp_047",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "C",
-    "area_familiarity": 0.78
-  },
-  {
-    "id": "esk_0133",
-    "employee_id": "emp_048",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.7
-  },
-  {
-    "id": "esk_0134",
-    "employee_id": "emp_048",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "B",
-    "area_familiarity": 0.6
-  },
-  {
-    "id": "esk_0135",
-    "employee_id": "emp_048",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.86
-  },
-  {
-    "id": "esk_0136",
-    "employee_id": "emp_048",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "B",
-    "area_familiarity": 0.81
-  },
-  {
-    "id": "esk_0137",
-    "employee_id": "emp_048",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "A",
-    "area_familiarity": 0.57
-  },
-  {
-    "id": "esk_0138",
-    "employee_id": "emp_049",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "S",
-    "area_familiarity": 0.62
-  },
-  {
-    "id": "esk_0139",
-    "employee_id": "emp_049",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "S",
-    "area_familiarity": 0.7
-  },
-  {
-    "id": "esk_0140",
-    "employee_id": "emp_049",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "S",
-    "area_familiarity": 0.94
-  },
-  {
-    "id": "esk_0141",
-    "employee_id": "emp_049",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "S",
-    "area_familiarity": 0.78
-  },
-  {
-    "id": "esk_0142",
-    "employee_id": "emp_050",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "A",
-    "area_familiarity": 0.87
-  },
-  {
-    "id": "esk_0143",
-    "employee_id": "emp_050",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "A",
-    "area_familiarity": 1.0
-  },
-  {
-    "id": "esk_0144",
-    "employee_id": "emp_050",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "A",
-    "area_familiarity": 0.84
-  },
-  {
-    "id": "esk_0145",
-    "employee_id": "emp_050",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "A",
-    "area_familiarity": 0.98
-  },
-  {
-    "id": "esk_0146",
-    "employee_id": "emp_051",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "A",
-    "area_familiarity": 0.85
-  },
-  {
-    "id": "esk_0147",
-    "employee_id": "emp_051",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "A",
-    "area_familiarity": 0.89
-  },
-  {
-    "id": "esk_0148",
-    "employee_id": "emp_051",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "A",
-    "area_familiarity": 0.8
-  },
-  {
-    "id": "esk_0149",
-    "employee_id": "emp_051",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "A",
-    "area_familiarity": 0.93
-  },
-  {
-    "id": "esk_0150",
-    "employee_id": "emp_052",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "A",
-    "area_familiarity": 0.96
-  },
-  {
-    "id": "esk_0151",
-    "employee_id": "emp_052",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "B",
-    "area_familiarity": 0.9
-  },
-  {
-    "id": "esk_0152",
-    "employee_id": "emp_052",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.79
-  },
-  {
-    "id": "esk_0153",
-    "employee_id": "emp_052",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "B",
-    "area_familiarity": 0.7
-  },
-  {
-    "id": "esk_0154",
-    "employee_id": "emp_053",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.94
-  },
-  {
-    "id": "esk_0155",
-    "employee_id": "emp_053",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "B",
-    "area_familiarity": 0.71
-  },
-  {
-    "id": "esk_0156",
-    "employee_id": "emp_053",
+    "employee_id": "emp_043",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.91
   },
   {
+    "id": "esk_0124",
+    "employee_id": "emp_043",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.84
+  },
+  {
+    "id": "esk_0125",
+    "employee_id": "emp_044",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
+    "skill_level": "A",
+    "area_familiarity": 0.69
+  },
+  {
+    "id": "esk_0126",
+    "employee_id": "emp_044",
+    "area_code": "meat",
+    "task_code": "display",
+    "skill_level": "A",
+    "area_familiarity": 0.77
+  },
+  {
+    "id": "esk_0127",
+    "employee_id": "emp_044",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "B",
+    "area_familiarity": 0.82
+  },
+  {
+    "id": "esk_0128",
+    "employee_id": "emp_044",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.88
+  },
+  {
+    "id": "esk_0129",
+    "employee_id": "emp_044",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "S",
+    "area_familiarity": 0.76
+  },
+  {
+    "id": "esk_0130",
+    "employee_id": "emp_044",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.69
+  },
+  {
+    "id": "esk_0131",
+    "employee_id": "emp_044",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.8
+  },
+  {
+    "id": "esk_0132",
+    "employee_id": "emp_045",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "B",
+    "area_familiarity": 0.64
+  },
+  {
+    "id": "esk_0133",
+    "employee_id": "emp_045",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "C",
+    "area_familiarity": 0.72
+  },
+  {
+    "id": "esk_0134",
+    "employee_id": "emp_046",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "C",
+    "area_familiarity": 0.61
+  },
+  {
+    "id": "esk_0135",
+    "employee_id": "emp_046",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "C",
+    "area_familiarity": 0.79
+  },
+  {
+    "id": "esk_0136",
+    "employee_id": "emp_046",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "C",
+    "area_familiarity": 0.77
+  },
+  {
+    "id": "esk_0137",
+    "employee_id": "emp_047",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "C",
+    "area_familiarity": 0.89
+  },
+  {
+    "id": "esk_0138",
+    "employee_id": "emp_047",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "C",
+    "area_familiarity": 0.88
+  },
+  {
+    "id": "esk_0139",
+    "employee_id": "emp_048",
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "skill_level": "A",
+    "area_familiarity": 0.81
+  },
+  {
+    "id": "esk_0140",
+    "employee_id": "emp_048",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "A",
+    "area_familiarity": 0.57
+  },
+  {
+    "id": "esk_0141",
+    "employee_id": "emp_048",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "B",
+    "area_familiarity": 0.52
+  },
+  {
+    "id": "esk_0142",
+    "employee_id": "emp_048",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.6
+  },
+  {
+    "id": "esk_0143",
+    "employee_id": "emp_048",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "B",
+    "area_familiarity": 0.68
+  },
+  {
+    "id": "esk_0144",
+    "employee_id": "emp_049",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "S",
+    "area_familiarity": 0.87
+  },
+  {
+    "id": "esk_0145",
+    "employee_id": "emp_049",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "S",
+    "area_familiarity": 1.0
+  },
+  {
+    "id": "esk_0146",
+    "employee_id": "emp_049",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "S",
+    "area_familiarity": 0.84
+  },
+  {
+    "id": "esk_0147",
+    "employee_id": "emp_049",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "S",
+    "area_familiarity": 0.98
+  },
+  {
+    "id": "esk_0148",
+    "employee_id": "emp_050",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "A",
+    "area_familiarity": 0.85
+  },
+  {
+    "id": "esk_0149",
+    "employee_id": "emp_050",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "A",
+    "area_familiarity": 0.89
+  },
+  {
+    "id": "esk_0150",
+    "employee_id": "emp_050",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "A",
+    "area_familiarity": 0.8
+  },
+  {
+    "id": "esk_0151",
+    "employee_id": "emp_050",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "A",
+    "area_familiarity": 0.93
+  },
+  {
+    "id": "esk_0152",
+    "employee_id": "emp_051",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "A",
+    "area_familiarity": 0.96
+  },
+  {
+    "id": "esk_0153",
+    "employee_id": "emp_051",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "A",
+    "area_familiarity": 0.9
+  },
+  {
+    "id": "esk_0154",
+    "employee_id": "emp_051",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "A",
+    "area_familiarity": 0.79
+  },
+  {
+    "id": "esk_0155",
+    "employee_id": "emp_051",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "A",
+    "area_familiarity": 0.7
+  },
+  {
+    "id": "esk_0156",
+    "employee_id": "emp_052",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "A",
+    "area_familiarity": 0.94
+  },
+  {
     "id": "esk_0157",
-    "employee_id": "emp_053",
+    "employee_id": "emp_052",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.71
+  },
+  {
+    "id": "esk_0158",
+    "employee_id": "emp_052",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "B",
+    "area_familiarity": 0.91
+  },
+  {
+    "id": "esk_0159",
+    "employee_id": "emp_052",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.79
   },
   {
-    "id": "esk_0158",
-    "employee_id": "emp_054",
+    "id": "esk_0160",
+    "employee_id": "emp_053",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.71
   },
   {
-    "id": "esk_0159",
-    "employee_id": "emp_054",
+    "id": "esk_0161",
+    "employee_id": "emp_053",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0160",
-    "employee_id": "emp_054",
+    "id": "esk_0162",
+    "employee_id": "emp_053",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.71
   },
   {
-    "id": "esk_0161",
-    "employee_id": "emp_054",
+    "id": "esk_0163",
+    "employee_id": "emp_053",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.71
   },
   {
-    "id": "esk_0162",
-    "employee_id": "emp_055",
+    "id": "esk_0164",
+    "employee_id": "emp_054",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.96
   },
   {
-    "id": "esk_0163",
-    "employee_id": "emp_055",
+    "id": "esk_0165",
+    "employee_id": "emp_054",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0164",
-    "employee_id": "emp_055",
+    "id": "esk_0166",
+    "employee_id": "emp_054",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.66
   },
   {
-    "id": "esk_0165",
-    "employee_id": "emp_055",
+    "id": "esk_0167",
+    "employee_id": "emp_054",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.75
   },
   {
-    "id": "esk_0166",
-    "employee_id": "emp_056",
+    "id": "esk_0168",
+    "employee_id": "emp_055",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
     "area_familiarity": 0.88
   },
   {
-    "id": "esk_0167",
-    "employee_id": "emp_056",
+    "id": "esk_0169",
+    "employee_id": "emp_055",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.63
   },
   {
-    "id": "esk_0168",
-    "employee_id": "emp_056",
+    "id": "esk_0170",
+    "employee_id": "emp_055",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
     "area_familiarity": 0.76
   },
   {
-    "id": "esk_0169",
-    "employee_id": "emp_056",
+    "id": "esk_0171",
+    "employee_id": "emp_055",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.82
   },
   {
-    "id": "esk_0170",
-    "employee_id": "emp_057",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.52
-  },
-  {
-    "id": "esk_0171",
-    "employee_id": "emp_057",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "A",
-    "area_familiarity": 0.83
-  },
-  {
     "id": "esk_0172",
-    "employee_id": "emp_057",
-    "area_code": "meat",
+    "employee_id": "emp_056",
+    "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.86
+    "area_familiarity": 0.62
   },
   {
     "id": "esk_0173",
-    "employee_id": "emp_057",
-    "area_code": "meat",
-    "task_code": "display",
+    "employee_id": "emp_056",
+    "area_code": "produce",
+    "task_code": "restock",
     "skill_level": "B",
-    "area_familiarity": 0.73
+    "area_familiarity": 0.93
   },
   {
     "id": "esk_0174",
-    "employee_id": "emp_057",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "S",
-    "area_familiarity": 0.84
+    "employee_id": "emp_056",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.76
   },
   {
     "id": "esk_0175",
-    "employee_id": "emp_057",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
+    "employee_id": "emp_056",
+    "area_code": "produce",
+    "task_code": "packing",
     "skill_level": "B",
-    "area_familiarity": 0.69
+    "area_familiarity": 0.91
   },
   {
     "id": "esk_0176",
     "employee_id": "emp_057",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "S",
-    "area_familiarity": 0.88
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.84
   },
   {
     "id": "esk_0177",
     "employee_id": "emp_057",
-    "area_code": "produce",
-    "task_code": "restock",
+    "area_code": "meat",
+    "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.69
   },
   {
     "id": "esk_0178",
     "employee_id": "emp_057",
-    "area_code": "produce",
-    "task_code": "display",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "A",
+    "area_familiarity": 0.62
+  },
+  {
+    "id": "esk_0179",
+    "employee_id": "emp_057",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.66
+  },
+  {
+    "id": "esk_0180",
+    "employee_id": "emp_057",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
     "skill_level": "B",
     "area_familiarity": 0.72
   },
   {
-    "id": "esk_0179",
-    "employee_id": "emp_058",
+    "id": "esk_0181",
+    "employee_id": "emp_057",
     "area_code": "produce",
-    "task_code": "weighing",
+    "task_code": "restock",
     "skill_level": "B",
     "area_familiarity": 0.82
   },
   {
-    "id": "esk_0180",
-    "employee_id": "emp_058",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "B",
-    "area_familiarity": 0.89
-  },
-  {
-    "id": "esk_0181",
-    "employee_id": "emp_058",
+    "id": "esk_0182",
+    "employee_id": "emp_057",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
-    "area_familiarity": 0.92
-  },
-  {
-    "id": "esk_0182",
-    "employee_id": "emp_058",
-    "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "B",
-    "area_familiarity": 0.96
+    "area_familiarity": 0.84
   },
   {
     "id": "esk_0183",
-    "employee_id": "emp_059",
-    "area_code": "produce",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.69
-  },
-  {
-    "id": "esk_0184",
-    "employee_id": "emp_059",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "B",
-    "area_familiarity": 0.77
-  },
-  {
-    "id": "esk_0185",
-    "employee_id": "emp_059",
+    "employee_id": "emp_058",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
-    "area_familiarity": 0.61
+    "area_familiarity": 0.8
   },
   {
-    "id": "esk_0186",
-    "employee_id": "emp_059",
+    "id": "esk_0184",
+    "employee_id": "emp_058",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.71
+  },
+  {
+    "id": "esk_0185",
+    "employee_id": "emp_058",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
-    "area_familiarity": 0.73
+    "area_familiarity": 0.79
+  },
+  {
+    "id": "esk_0186",
+    "employee_id": "emp_058",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.76
   },
   {
     "id": "esk_0187",
-    "employee_id": "emp_060",
+    "employee_id": "emp_059",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
@@ -1497,7 +1497,7 @@
   },
   {
     "id": "esk_0188",
-    "employee_id": "emp_060",
+    "employee_id": "emp_059",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
@@ -1505,7 +1505,7 @@
   },
   {
     "id": "esk_0189",
-    "employee_id": "emp_060",
+    "employee_id": "emp_059",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
@@ -1513,7 +1513,7 @@
   },
   {
     "id": "esk_0190",
-    "employee_id": "emp_060",
+    "employee_id": "emp_059",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
@@ -1521,7 +1521,7 @@
   },
   {
     "id": "esk_0191",
-    "employee_id": "emp_061",
+    "employee_id": "emp_060",
     "area_code": "produce",
     "task_code": "restock",
     "skill_level": "B",
@@ -1529,7 +1529,7 @@
   },
   {
     "id": "esk_0192",
-    "employee_id": "emp_061",
+    "employee_id": "emp_060",
     "area_code": "produce",
     "task_code": "display",
     "skill_level": "B",
@@ -1537,7 +1537,7 @@
   },
   {
     "id": "esk_0193",
-    "employee_id": "emp_061",
+    "employee_id": "emp_060",
     "area_code": "produce",
     "task_code": "packing",
     "skill_level": "B",
@@ -1545,7 +1545,7 @@
   },
   {
     "id": "esk_0194",
-    "employee_id": "emp_061",
+    "employee_id": "emp_060",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
@@ -1553,7 +1553,7 @@
   },
   {
     "id": "esk_0195",
-    "employee_id": "emp_062",
+    "employee_id": "emp_061",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "B",
@@ -1561,143 +1561,143 @@
   },
   {
     "id": "esk_0196",
-    "employee_id": "emp_062",
+    "employee_id": "emp_061",
     "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "C",
-    "area_familiarity": 0.75
+    "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.78
   },
   {
     "id": "esk_0197",
-    "employee_id": "emp_062",
+    "employee_id": "emp_061",
     "area_code": "produce",
-    "task_code": "packing",
-    "skill_level": "C",
-    "area_familiarity": 0.73
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.62
   },
   {
     "id": "esk_0198",
+    "employee_id": "emp_061",
+    "area_code": "produce",
+    "task_code": "packing",
+    "skill_level": "B",
+    "area_familiarity": 0.75
+  },
+  {
+    "id": "esk_0199",
+    "employee_id": "emp_062",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.78
+  },
+  {
+    "id": "esk_0200",
+    "employee_id": "emp_062",
+    "area_code": "produce",
+    "task_code": "weighing",
+    "skill_level": "C",
+    "area_familiarity": 0.98
+  },
+  {
+    "id": "esk_0201",
     "employee_id": "emp_063",
     "area_code": "produce",
     "task_code": "weighing",
     "skill_level": "C",
-    "area_familiarity": 0.71
+    "area_familiarity": 0.7
   },
   {
-    "id": "esk_0199",
-    "employee_id": "emp_064",
-    "area_code": "cashier",
-    "task_code": "customer_service",
+    "id": "esk_0202",
+    "employee_id": "emp_063",
+    "area_code": "produce",
+    "task_code": "restock",
     "skill_level": "C",
     "area_familiarity": 0.61
   },
   {
-    "id": "esk_0200",
-    "employee_id": "emp_065",
+    "id": "esk_0203",
+    "employee_id": "emp_064",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "C",
     "area_familiarity": 0.69
   },
   {
-    "id": "esk_0201",
-    "employee_id": "emp_065",
+    "id": "esk_0204",
+    "employee_id": "emp_064",
     "area_code": "cashier",
     "task_code": "cashier",
-    "skill_level": "S",
-    "area_familiarity": 0.63
-  },
-  {
-    "id": "esk_0202",
-    "employee_id": "emp_066",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "S",
-    "area_familiarity": 0.9
-  },
-  {
-    "id": "esk_0203",
-    "employee_id": "emp_066",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "A",
+    "skill_level": "C",
     "area_familiarity": 0.98
   },
   {
-    "id": "esk_0204",
-    "employee_id": "emp_067",
+    "id": "esk_0205",
+    "employee_id": "emp_065",
     "area_code": "cashier",
     "task_code": "cashier",
-    "skill_level": "A",
+    "skill_level": "C",
+    "area_familiarity": 0.9
+  },
+  {
+    "id": "esk_0206",
+    "employee_id": "emp_065",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "S",
+    "area_familiarity": 0.98
+  },
+  {
+    "id": "esk_0207",
+    "employee_id": "emp_066",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "S",
     "area_familiarity": 0.94
   },
   {
-    "id": "esk_0205",
-    "employee_id": "emp_067",
+    "id": "esk_0208",
+    "employee_id": "emp_066",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "A",
     "area_familiarity": 0.85
   },
   {
-    "id": "esk_0206",
-    "employee_id": "emp_068",
+    "id": "esk_0209",
+    "employee_id": "emp_067",
     "area_code": "cashier",
     "task_code": "cashier",
     "skill_level": "A",
     "area_familiarity": 0.65
   },
   {
-    "id": "esk_0207",
-    "employee_id": "emp_068",
+    "id": "esk_0210",
+    "employee_id": "emp_067",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "A",
     "area_familiarity": 0.87
   },
   {
-    "id": "esk_0208",
-    "employee_id": "emp_069",
+    "id": "esk_0211",
+    "employee_id": "emp_068",
     "area_code": "cashier",
     "task_code": "cashier",
-    "skill_level": "B",
+    "skill_level": "A",
     "area_familiarity": 0.79
   },
   {
-    "id": "esk_0209",
-    "employee_id": "emp_069",
+    "id": "esk_0212",
+    "employee_id": "emp_068",
     "area_code": "cashier",
     "task_code": "customer_service",
-    "skill_level": "B",
+    "skill_level": "A",
     "area_familiarity": 0.7
   },
   {
-    "id": "esk_0210",
-    "employee_id": "emp_070",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "B",
-    "area_familiarity": 0.67
-  },
-  {
-    "id": "esk_0211",
-    "employee_id": "emp_070",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "B",
-    "area_familiarity": 0.84
-  },
-  {
-    "id": "esk_0212",
-    "employee_id": "emp_071",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "B",
-    "area_familiarity": 0.91
-  },
-  {
     "id": "esk_0213",
-    "employee_id": "emp_071",
+    "employee_id": "emp_069",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "B",
@@ -1705,466 +1705,522 @@
   },
   {
     "id": "esk_0214",
-    "employee_id": "emp_072",
+    "employee_id": "emp_069",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "B",
+    "area_familiarity": 0.84
+  },
+  {
+    "id": "esk_0215",
+    "employee_id": "emp_070",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "B",
+    "area_familiarity": 0.91
+  },
+  {
+    "id": "esk_0216",
+    "employee_id": "emp_070",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.67
+  },
+  {
+    "id": "esk_0217",
+    "employee_id": "emp_071",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "B",
     "area_familiarity": 0.64
   },
   {
-    "id": "esk_0215",
-    "employee_id": "emp_072",
+    "id": "esk_0218",
+    "employee_id": "emp_071",
     "area_code": "cashier",
     "task_code": "cashier",
     "skill_level": "B",
     "area_familiarity": 0.61
   },
   {
-    "id": "esk_0216",
-    "employee_id": "emp_073",
+    "id": "esk_0219",
+    "employee_id": "emp_072",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "B",
     "area_familiarity": 0.83
   },
   {
-    "id": "esk_0217",
-    "employee_id": "emp_073",
+    "id": "esk_0220",
+    "employee_id": "emp_072",
     "area_code": "cashier",
     "task_code": "cashier",
     "skill_level": "B",
     "area_familiarity": 0.96
   },
   {
-    "id": "esk_0218",
-    "employee_id": "emp_074",
+    "id": "esk_0221",
+    "employee_id": "emp_073",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "B",
     "area_familiarity": 0.76
   },
   {
-    "id": "esk_0219",
-    "employee_id": "emp_074",
+    "id": "esk_0222",
+    "employee_id": "emp_073",
     "area_code": "cashier",
     "task_code": "cashier",
     "skill_level": "B",
     "area_familiarity": 0.89
   },
   {
-    "id": "esk_0220",
-    "employee_id": "emp_075",
+    "id": "esk_0223",
+    "employee_id": "emp_074",
     "area_code": "cashier",
     "task_code": "cashier",
     "skill_level": "B",
     "area_familiarity": 0.84
   },
   {
-    "id": "esk_0221",
-    "employee_id": "emp_075",
+    "id": "esk_0224",
+    "employee_id": "emp_074",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "B",
     "area_familiarity": 0.93
   },
   {
-    "id": "esk_0222",
-    "employee_id": "emp_076",
+    "id": "esk_0225",
+    "employee_id": "emp_075",
     "area_code": "cashier",
     "task_code": "cashier",
     "skill_level": "B",
     "area_familiarity": 0.64
   },
   {
-    "id": "esk_0223",
-    "employee_id": "emp_076",
+    "id": "esk_0226",
+    "employee_id": "emp_075",
     "area_code": "cashier",
     "task_code": "customer_service",
     "skill_level": "B",
     "area_familiarity": 0.91
   },
   {
-    "id": "esk_0224",
-    "employee_id": "emp_077",
-    "area_code": "aquatic",
-    "task_code": "weighing",
+    "id": "esk_0227",
+    "employee_id": "emp_076",
+    "area_code": "cashier",
+    "task_code": "cashier",
     "skill_level": "B",
-    "area_familiarity": 0.82
+    "area_familiarity": 0.92
   },
   {
-    "id": "esk_0225",
+    "id": "esk_0228",
+    "employee_id": "emp_076",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "B",
+    "area_familiarity": 0.83
+  },
+  {
+    "id": "esk_0229",
     "employee_id": "emp_077",
-    "area_code": "meat",
+    "area_code": "aquatic",
     "task_code": "weighing",
     "skill_level": "B",
     "area_familiarity": 0.64
   },
   {
-    "id": "esk_0226",
-    "employee_id": "emp_077",
-    "area_code": "produce",
-    "task_code": "restock",
-    "skill_level": "A",
-    "area_familiarity": 0.76
-  },
-  {
-    "id": "esk_0227",
-    "employee_id": "emp_077",
-    "area_code": "produce",
-    "task_code": "display",
-    "skill_level": "B",
-    "area_familiarity": 0.53
-  },
-  {
-    "id": "esk_0228",
-    "employee_id": "emp_077",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "B",
-    "area_familiarity": 0.51
-  },
-  {
-    "id": "esk_0229",
-    "employee_id": "emp_077",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "B",
-    "area_familiarity": 0.73
-  },
-  {
     "id": "esk_0230",
     "employee_id": "emp_077",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "B",
-    "area_familiarity": 0.75
-  },
-  {
-    "id": "esk_0231",
-    "employee_id": "emp_078",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "B",
-    "area_familiarity": 0.98
-  },
-  {
-    "id": "esk_0232",
-    "employee_id": "emp_078",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "B",
-    "area_familiarity": 0.85
-  },
-  {
-    "id": "esk_0233",
-    "employee_id": "emp_079",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "C",
-    "area_familiarity": 0.88
-  },
-  {
-    "id": "esk_0234",
-    "employee_id": "emp_080",
-    "area_code": "cashier",
-    "task_code": "customer_service",
-    "skill_level": "C",
-    "area_familiarity": 0.85
-  },
-  {
-    "id": "esk_0235",
-    "employee_id": "emp_081",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.69
-  },
-  {
-    "id": "esk_0236",
-    "employee_id": "emp_081",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "B",
-    "area_familiarity": 0.83
-  },
-  {
-    "id": "esk_0237",
-    "employee_id": "emp_081",
     "area_code": "meat",
     "task_code": "weighing",
     "skill_level": "B",
-    "area_familiarity": 0.63
+    "area_familiarity": 0.76
   },
   {
-    "id": "esk_0238",
-    "employee_id": "emp_081",
+    "id": "esk_0231",
+    "employee_id": "emp_077",
+    "area_code": "meat",
+    "task_code": "display",
+    "skill_level": "A",
+    "area_familiarity": 0.53
+  },
+  {
+    "id": "esk_0232",
+    "employee_id": "emp_077",
     "area_code": "produce",
     "task_code": "restock",
+    "skill_level": "A",
+    "area_familiarity": 0.51
+  },
+  {
+    "id": "esk_0233",
+    "employee_id": "emp_077",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "A",
+    "area_familiarity": 0.67
+  },
+  {
+    "id": "esk_0234",
+    "employee_id": "emp_077",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "S",
+    "area_familiarity": 0.54
+  },
+  {
+    "id": "esk_0235",
+    "employee_id": "emp_077",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
     "skill_level": "B",
-    "area_familiarity": 0.83
-  },
-  {
-    "id": "esk_0239",
-    "employee_id": "emp_081",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "A",
-    "area_familiarity": 0.61
-  },
-  {
-    "id": "esk_0240",
-    "employee_id": "emp_082",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "C",
-    "area_familiarity": 0.7
-  },
-  {
-    "id": "esk_0241",
-    "employee_id": "emp_082",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "S",
-    "area_familiarity": 0.79
-  },
-  {
-    "id": "esk_0242",
-    "employee_id": "emp_082",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "S",
-    "area_familiarity": 0.84
-  },
-  {
-    "id": "esk_0243",
-    "employee_id": "emp_083",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "A",
-    "area_familiarity": 0.73
-  },
-  {
-    "id": "esk_0244",
-    "employee_id": "emp_083",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "A",
-    "area_familiarity": 0.8
-  },
-  {
-    "id": "esk_0245",
-    "employee_id": "emp_083",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "A",
-    "area_familiarity": 0.73
-  },
-  {
-    "id": "esk_0246",
-    "employee_id": "emp_084",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "A",
-    "area_familiarity": 0.68
-  },
-  {
-    "id": "esk_0247",
-    "employee_id": "emp_084",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "A",
-    "area_familiarity": 0.92
-  },
-  {
-    "id": "esk_0248",
-    "employee_id": "emp_084",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "A",
-    "area_familiarity": 0.74
-  },
-  {
-    "id": "esk_0249",
-    "employee_id": "emp_085",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "A",
     "area_familiarity": 0.88
   },
   {
-    "id": "esk_0250",
-    "employee_id": "emp_085",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
+    "id": "esk_0236",
+    "employee_id": "emp_077",
+    "area_code": "cashier",
+    "task_code": "cashier",
     "skill_level": "B",
-    "area_familiarity": 0.71
+    "area_familiarity": 0.79
   },
   {
-    "id": "esk_0251",
-    "employee_id": "emp_085",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
+    "id": "esk_0237",
+    "employee_id": "emp_077",
+    "area_code": "cashier",
+    "task_code": "customer_service",
     "skill_level": "B",
-    "area_familiarity": 0.6
+    "area_familiarity": 0.85
   },
   {
-    "id": "esk_0252",
-    "employee_id": "emp_086",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
+    "id": "esk_0238",
+    "employee_id": "emp_078",
+    "area_code": "cashier",
+    "task_code": "cashier",
     "skill_level": "B",
-    "area_familiarity": 0.63
+    "area_familiarity": 0.77
   },
   {
-    "id": "esk_0253",
-    "employee_id": "emp_086",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
+    "id": "esk_0239",
+    "employee_id": "emp_078",
+    "area_code": "cashier",
+    "task_code": "customer_service",
     "skill_level": "B",
     "area_familiarity": 0.89
   },
   {
-    "id": "esk_0254",
-    "employee_id": "emp_086",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "B",
-    "area_familiarity": 0.8
+    "id": "esk_0240",
+    "employee_id": "emp_079",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "C",
+    "area_familiarity": 0.85
   },
   {
-    "id": "esk_0255",
-    "employee_id": "emp_087",
+    "id": "esk_0241",
+    "employee_id": "emp_080",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "C",
+    "area_familiarity": 0.79
+  },
+  {
+    "id": "esk_0242",
+    "employee_id": "emp_081",
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "skill_level": "S",
+    "area_familiarity": 0.63
+  },
+  {
+    "id": "esk_0243",
+    "employee_id": "emp_081",
+    "area_code": "aquatic",
+    "task_code": "cleaning",
+    "skill_level": "B",
+    "area_familiarity": 0.6
+  },
+  {
+    "id": "esk_0244",
+    "employee_id": "emp_081",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "S",
+    "area_familiarity": 0.61
+  },
+  {
+    "id": "esk_0245",
+    "employee_id": "emp_081",
+    "area_code": "produce",
+    "task_code": "restock",
+    "skill_level": "B",
+    "area_familiarity": 0.6
+  },
+  {
+    "id": "esk_0246",
+    "employee_id": "emp_081",
+    "area_code": "produce",
+    "task_code": "display",
+    "skill_level": "B",
+    "area_familiarity": 0.69
+  },
+  {
+    "id": "esk_0247",
+    "employee_id": "emp_081",
     "area_code": "replenishment",
     "task_code": "restock_unload",
     "skill_level": "B",
-    "area_familiarity": 0.88
+    "area_familiarity": 0.63
+  },
+  {
+    "id": "esk_0248",
+    "employee_id": "emp_081",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "B",
+    "area_familiarity": 0.7
+  },
+  {
+    "id": "esk_0249",
+    "employee_id": "emp_082",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "C",
+    "area_familiarity": 0.67
+  },
+  {
+    "id": "esk_0250",
+    "employee_id": "emp_082",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "S",
+    "area_familiarity": 0.68
+  },
+  {
+    "id": "esk_0251",
+    "employee_id": "emp_082",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "skill_level": "S",
+    "area_familiarity": 0.92
+  },
+  {
+    "id": "esk_0252",
+    "employee_id": "emp_083",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "A",
+    "area_familiarity": 0.71
+  },
+  {
+    "id": "esk_0253",
+    "employee_id": "emp_083",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "A",
+    "area_familiarity": 0.84
+  },
+  {
+    "id": "esk_0254",
+    "employee_id": "emp_083",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "skill_level": "A",
+    "area_familiarity": 0.95
+  },
+  {
+    "id": "esk_0255",
+    "employee_id": "emp_084",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "skill_level": "A",
+    "area_familiarity": 0.6
   },
   {
     "id": "esk_0256",
-    "employee_id": "emp_087",
+    "employee_id": "emp_084",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "A",
+    "area_familiarity": 0.98
+  },
+  {
+    "id": "esk_0257",
+    "employee_id": "emp_084",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "A",
+    "area_familiarity": 0.63
+  },
+  {
+    "id": "esk_0258",
+    "employee_id": "emp_085",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "skill_level": "A",
+    "area_familiarity": 0.76
+  },
+  {
+    "id": "esk_0259",
+    "employee_id": "emp_085",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "B",
+    "area_familiarity": 0.82
+  },
+  {
+    "id": "esk_0260",
+    "employee_id": "emp_085",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "B",
+    "area_familiarity": 0.7
+  },
+  {
+    "id": "esk_0261",
+    "employee_id": "emp_086",
     "area_code": "replenishment",
     "task_code": "shelf_restock",
     "skill_level": "B",
     "area_familiarity": 0.86
   },
   {
-    "id": "esk_0257",
+    "id": "esk_0262",
+    "employee_id": "emp_086",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "B",
+    "area_familiarity": 0.8
+  },
+  {
+    "id": "esk_0263",
+    "employee_id": "emp_086",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "skill_level": "B",
+    "area_familiarity": 0.92
+  },
+  {
+    "id": "esk_0264",
+    "employee_id": "emp_087",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "B",
+    "area_familiarity": 0.72
+  },
+  {
+    "id": "esk_0265",
+    "employee_id": "emp_087",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "B",
+    "area_familiarity": 0.76
+  },
+  {
+    "id": "esk_0266",
     "employee_id": "emp_087",
     "area_code": "replenishment",
     "task_code": "inventory",
     "skill_level": "B",
-    "area_familiarity": 0.8
-  },
-  {
-    "id": "esk_0258",
-    "employee_id": "emp_088",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "B",
-    "area_familiarity": 0.64
-  },
-  {
-    "id": "esk_0259",
-    "employee_id": "emp_088",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "B",
-    "area_familiarity": 0.69
-  },
-  {
-    "id": "esk_0260",
-    "employee_id": "emp_088",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "B",
-    "area_familiarity": 0.88
-  },
-  {
-    "id": "esk_0261",
-    "employee_id": "emp_089",
-    "area_code": "replenishment",
-    "task_code": "shelf_restock",
-    "skill_level": "B",
-    "area_familiarity": 0.87
-  },
-  {
-    "id": "esk_0262",
-    "employee_id": "emp_089",
-    "area_code": "replenishment",
-    "task_code": "restock_unload",
-    "skill_level": "B",
-    "area_familiarity": 0.75
-  },
-  {
-    "id": "esk_0263",
-    "employee_id": "emp_089",
-    "area_code": "replenishment",
-    "task_code": "inventory",
-    "skill_level": "B",
-    "area_familiarity": 0.82
-  },
-  {
-    "id": "esk_0264",
-    "employee_id": "emp_090",
-    "area_code": "aquatic",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.67
-  },
-  {
-    "id": "esk_0265",
-    "employee_id": "emp_090",
-    "area_code": "aquatic",
-    "task_code": "cleaning",
-    "skill_level": "S",
-    "area_familiarity": 0.8
-  },
-  {
-    "id": "esk_0266",
-    "employee_id": "emp_090",
-    "area_code": "meat",
-    "task_code": "weighing",
-    "skill_level": "B",
-    "area_familiarity": 0.64
+    "area_familiarity": 0.7
   },
   {
     "id": "esk_0267",
-    "employee_id": "emp_090",
-    "area_code": "meat",
-    "task_code": "display",
+    "employee_id": "emp_088",
+    "area_code": "replenishment",
+    "task_code": "inventory",
     "skill_level": "B",
-    "area_familiarity": 0.68
+    "area_familiarity": 0.83
   },
   {
     "id": "esk_0268",
-    "employee_id": "emp_090",
-    "area_code": "produce",
-    "task_code": "display",
+    "employee_id": "emp_088",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
     "skill_level": "B",
-    "area_familiarity": 0.6
-  },
-  {
-    "id": "esk_0269",
-    "employee_id": "emp_090",
-    "area_code": "cashier",
-    "task_code": "cashier",
-    "skill_level": "S",
     "area_familiarity": 0.79
   },
   {
+    "id": "esk_0269",
+    "employee_id": "emp_088",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "B",
+    "area_familiarity": 0.81
+  },
+  {
     "id": "esk_0270",
+    "employee_id": "emp_089",
+    "area_code": "replenishment",
+    "task_code": "shelf_restock",
+    "skill_level": "B",
+    "area_familiarity": 1.0
+  },
+  {
+    "id": "esk_0271",
+    "employee_id": "emp_089",
+    "area_code": "replenishment",
+    "task_code": "restock_unload",
+    "skill_level": "B",
+    "area_familiarity": 0.82
+  },
+  {
+    "id": "esk_0272",
+    "employee_id": "emp_089",
+    "area_code": "replenishment",
+    "task_code": "inventory",
+    "skill_level": "B",
+    "area_familiarity": 0.74
+  },
+  {
+    "id": "esk_0273",
+    "employee_id": "emp_090",
+    "area_code": "aquatic",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.61
+  },
+  {
+    "id": "esk_0274",
+    "employee_id": "emp_090",
+    "area_code": "meat",
+    "task_code": "weighing",
+    "skill_level": "B",
+    "area_familiarity": 0.59
+  },
+  {
+    "id": "esk_0275",
+    "employee_id": "emp_090",
+    "area_code": "cashier",
+    "task_code": "cashier",
+    "skill_level": "A",
+    "area_familiarity": 0.55
+  },
+  {
+    "id": "esk_0276",
+    "employee_id": "emp_090",
+    "area_code": "cashier",
+    "task_code": "customer_service",
+    "skill_level": "A",
+    "area_familiarity": 0.71
+  },
+  {
+    "id": "esk_0277",
     "employee_id": "emp_090",
     "area_code": "replenishment",
     "task_code": "restock_unload",
     "skill_level": "B",
-    "area_familiarity": 0.69
+    "area_familiarity": 0.83
   },
   {
-    "id": "esk_0271",
+    "id": "esk_0278",
     "employee_id": "emp_090",
     "area_code": "replenishment",
     "task_code": "shelf_restock",
     "skill_level": "B",
-    "area_familiarity": 0.82
+    "area_familiarity": 0.66
   }
 ]

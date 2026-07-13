@@ -196,21 +196,21 @@ for area_code, total, reg_ct, temp_ct in PLAN:
 
 # 确定性专业岗覆盖：
 # 肉类区(meat) 的 meat_cut/meat_divide、水产区(aquatic) 的 fish_butcher/aquatic_process，
-# 每个相关 task 至少分配 2 名满足 min_skill_level 的正式工，
-# 且 fish_butcher / meat_cut 至少包含 1 名 S 级员工。
+# 每个相关 task 至少分配 4 名满足 min_skill_level 的正式工，
+# 且 fish_butcher / meat_cut 至少包含 2 名 S 级员工。
 prof_assignment = {}  # (employee_id, task_code) -> skill_level
 for ac, prof_tasks in PROF_TASKS.items():
     regs = reg_by_area.get(ac, [])
     if not regs or not prof_tasks:
         continue
-    needed = 2
+    needed = 4
     for tk in prof_tasks:
         min_lv = tk["min_skill_level"]
-        for eid in regs[:needed]:
+        for idx, eid in enumerate(regs[:needed]):
             if tk["task_code"] in ("fish_butcher", "meat_cut"):
                 lv = "S"
             else:
-                lv = "S" if min_lv == "S" else min_lv
+                lv = "A" if min_lv == "S" else min_lv
             prof_assignment[(eid, tk["task_code"])] = lv
 
 # 第二遍：生成技能
