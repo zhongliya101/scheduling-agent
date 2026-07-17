@@ -196,7 +196,7 @@ h3 { font-size: 13px; color: #52616b; }
   padding: 2px 6px;
 }
 
-.area-list, .assignment-list, .chat-list {
+.assignment-list, .chat-list {
   display: grid;
   gap: 8px;
 }
@@ -267,23 +267,12 @@ h3 { font-size: 13px; color: #52616b; }
   padding-right: 2px;
 }
 
-.area-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 6px 10px;
-  border-bottom: 1px solid #edf2f1;
-  padding: 10px 0;
-  font-size: 13px;
-}
-.area-row strong { grid-column: 1 / -1; }
-.area-row span { color: #60717a; }
-
 .leave-panel {
   display: grid;
   gap: 10px;
-  border-top: 1px solid #edf2f1;
-  margin-top: 14px;
-  padding-top: 14px;
+  border-bottom: 1px solid #edf2f1;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
 }
 
 .leave-panel label {

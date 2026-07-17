@@ -373,9 +373,6 @@ export function App() {
 
       <section className="workbench-grid">
         <aside className="panel area-panel">
-          <HistoryPanel versions={versions} activeVersionId={schedule?.version_id} onOpen={openVersion} />
-          <PanelTitle title="区域保底" />
-          <AreaRows schedule={schedule} />
           <LeaveRequestPanel
             employees={employees}
             employeeId={leaveEmployeeId}
@@ -387,6 +384,7 @@ export function App() {
             onSubmit={submitLeavePreference}
             onDismissNotice={() => setLeaveNotice(null)}
           />
+          <HistoryPanel versions={versions} activeVersionId={schedule?.version_id} onOpen={openVersion} />
         </aside>
 
         <section className="panel board-panel">
@@ -577,36 +575,6 @@ function PanelTitle({ title, action }: { title: string; action?: string }) {
     <div className="panel-title">
       <h2>{title}</h2>
       {action && <code>{action}</code>}
-    </div>
-  );
-}
-
-function AreaRows({ schedule }: { schedule: ScheduleResponse | null }) {
-  const rows = useMemo(() => {
-    if (!schedule) return [];
-    const byArea = new Map<string, { area: string; regular: number; temp: number; protected: number }>();
-    for (const item of schedule.schedule_items) {
-      const row = byArea.get(item.area_code) ?? { area: item.area_name, regular: 0, temp: 0, protected: 0 };
-      if (item.employee_type === "regular") row.regular += 1;
-      if (item.employee_type === "temporary") row.temp += 1;
-      if (item.is_protected) row.protected += 1;
-      byArea.set(item.area_code, row);
-    }
-    return AREA_ORDER.map((code) => byArea.get(code)).filter(Boolean) as { area: string; regular: number; temp: number; protected: number }[];
-  }, [schedule]);
-
-  if (!schedule) return <p className="muted">生成后显示各区域正式工、临时工与专业岗保护覆盖。</p>;
-
-  return (
-    <div className="area-list">
-      {rows.map((row) => (
-        <div className="area-row" key={row.area}>
-          <strong>{row.area}</strong>
-          <span>正式工 {row.regular}</span>
-          <span>临时工 {row.temp}</span>
-          <span>保护岗 {row.protected}</span>
-        </div>
-      ))}
     </div>
   );
 }
